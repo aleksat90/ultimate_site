@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load bootstrap %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>Kvadratna jednacina:</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" value="Izracunaj" class="btn btn-warning" />
+    </form>
+
+    <h3>Resenje 1: <em>{{resenje1}}</em></h3>
+    <h3>Resenje 2: <em>{{resenje2}}</em></h3>
+
+
+
+  </div>
+
+
+{%endblock%}
+

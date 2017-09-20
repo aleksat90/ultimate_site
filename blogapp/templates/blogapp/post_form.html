@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <img src="{% static 'pycharm/img/skracena.jpg' %}" alt="">
+    <br><br><br>
+    <div class="container">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <input class="btn btn-warning" type="submit" value="Posalji"  >
+        </form>
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+    <img src="{% static 'pycharm/img/skracena.jpg' %}" alt="">
+    <div class="container">
+
+            {% for post in post_list %}
+                <h1><a href="{% url 'blogapp:post_pojedinacan' pk=post.pk %}">{{ post.naslov}}</a></h1>
+                <p>{{ post.poruka }}</p>
+                <em><h6>Autor: {{ post.autor }} Datum: {{ post.datum_kreiranja }}</h6></em>
+            {% endfor %}
+			
+			
+			<a href="{% url 'blogapp:post_pojedinacan' pk='50' %}">Link ka pojedinacnom postu</a>
+	
+	
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	
+    </div>
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+			document.documentElement.scrollTop = 0; // For IE and Firefox
+		}
+		
+	</script>
+
+
+{% endblock %}
+
+
+
+
+
+

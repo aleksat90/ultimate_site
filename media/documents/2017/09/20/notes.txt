@@ -1,0 +1,4 @@
+Program za nadgledanje IP adresa konektovanih na racunar:
+
+sudo apt-get install netdiscover
+sudo netdiscover [range u kom se vrsi pretraga]

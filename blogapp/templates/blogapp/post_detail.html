@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+    <div class="container">
+		<h2>Naslov: {{ post.naslov }}</h2>
+		<h4>Autor: {{ post.autor }}</h4>
+		<p>Tekst poruke:</p>
+		<p>{{ post.poruka }}</p>
+		<h6>Datum: {{ post.datum_kreiranja }}</h6>
+    </div>
+	
+
+{% endblock %}
