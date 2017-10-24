@@ -15,23 +15,27 @@
         // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
         'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
       });
-      google.charts.setOnLoadCallback(drawRegionsMap);
+      google.charts.setOnLoadCallback(drawMarkersMap);
 
       r
 
-      function drawRegionsMap() {
+      function drawMarkersMap() {
         var data = google.visualization.arrayToDataTable([
-          ['Country', 'Popularity'],
-          ['Germany', 200],
+          ['City', 'Popularity'],
+          ['Belgrade', 200],
           // ['United States', 300],
           // ['Brazil', 400],
           // ['Canada', 500],
-          ['France', 600],
-          ['Serbia', {{broj}}],
+          ['Cacak', 600],
+          ['Smederevo', {{broj}}],
           // ['RU', 700]
         ]);
 
-        var options = {region: '039'};
+        var options = {region: 'RS',
+                displayMode: 'markers',
+                colorAxis: {colors: ['green', 'blue']}
+
+      };
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 

@@ -6,5 +6,5 @@ from django.shortcuts import render
 def chartView(request):
 	print('chart View pokrenut')
 	print('pokrenut view')
-	broj = 15000
+	broj = 300
 	return render(request, 'charts/chart.html', {'broj': broj})
