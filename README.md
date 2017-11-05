@@ -2,7 +2,8 @@
 
 ## Introduction:
 This is exercise of one website with many applications. It is called ultimate because it contains different application which will never be on one site in reallity.
-In one site it is:
+Applications included:
+- Accounts(Sing up, login, logout, users permissions)
 - Blog application
 - Quadratic equation
 - File uploader
